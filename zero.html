@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Painel : controle</title>
+</head>
+
+<body>
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Painel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Outra ação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mais outra ação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Desativado </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Aqui ficará uma chamada para o painel</h1>
+                    <p class="lead">Campo de apresentação de exemplos e </p>
+                </div>
+            </div>
+        </article>
+        <br>
+        <article>
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Digite a palavra</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg">
+            </div>
+
+            <br>
+
+            <div style="display: flex; justify-content: space-around; margin-left: 20%; margin-right: 20%;">
+                <button type="button" class="btn btn-secondary" style="padding-inline: 5%;">Procurar</button>
+                <button type="button" class="btn btn-primary" style="padding-inline: 5%;">Inserir</button>
+                <button type="button" class="btn btn-success" style="padding-inline: 5%;">Atualizar</button>
+                <button type="button" class="btn btn-danger" style="padding-inline: 5%;">Apagar</button>
+
+            </div>
+        </article>
+
+
+        <script>
+            fetch('stop_port.txt')
+                .then(response => response.text())
+                .then(text => {
+                    const array = text.split("\n");
+                    /*document.writeln('oList - Exists<br>');
+                    document.write(array);*/
+                }) 
+        </script>
+
+        <article style="padding-top: 5em;">
+            <div id="app">
+
+                <ul>
+                    <li>
+
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+    </main>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</html>
